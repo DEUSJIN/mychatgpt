@@ -1,12 +1,12 @@
 import streamlit as st
 from utils import initialize, chat
 
-st.title("My ChatGPT")
+st.title("☕ My ChatGPT")
 
 with st.sidebar:
     api_key = st.text_input("API_KEY", type="password")
     if "messages" not in st.session_state:
-        st.session_state["messages"] = [{"role": "ai", "content": "Hello, i'm your AI assistant, what can i do for you?"}]
+        st.session_state["messages"] = [{"role": "ai", "content": "Hello, I'm your AI assistant. What can i do for you?"}]
     if api_key not in st.session_state or st.session_state.api_key != api_key:
         st.session_state["api_key"] = api_key
     st.markdown("[GET API_KEY](https://openai.com)")
